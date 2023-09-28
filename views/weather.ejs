@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Home</title>
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@1,9..40&display=swap');
+       body{
+            background-color: grey;
+        }
+        .con{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 690px;
+        
+        }
+        .con1{
+            height: 500px;
+            width:650px;
+            
+            background-image: url('https://images.pexels.com/photos/4101555/pexels-photo-4101555.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-repeat: no-repeat;
+            background-size: cover;
+          border-radius: 20px 0px 0px 20px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        .con2{
+            height: 500px;
+            width: 400px;
+            background-color: white;
+          border-radius:0px 20px 20px 0px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        
+        .in{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10px;
+        }
+        .in input{
+            height: 30px;
+            width: 300px;
+            opacity: 0.6;
+            padding-left: 10px;
+        }
+        .bio{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 180px;
+            color: white;
+        }
+        button{
+            background: none;
+            border: none;
+        }
+        input{
+            border-radius: 10px;
+        }
+        .con2 .res{
+            text-align: center;
+        }
+        
+        .climate{
+            margin-top: -40px;
+        }
+        .name{
+            margin-top: -18px;
+        }
+        .cel{
+          font-size :30px;
+        }
+        form{
+            display: flex;
+        }
+        .loc1{
+            color: white;
+            margin-top: 4px;
+        }
+        .loc{
+            display: flex;
+            color: white;
+            justify-content: flex-end;
+            margin: 20px 30px 0px 0px
+        }
+        .current{
+            font-size: 12px;
+            margin-top: -0px;
+        }
+        .locname{
+            margin-left: 5px;
+        }
+        .locname2{
+            margin-top: -10px;
+        }
+        .todaycli{
+            width: 350px;
+            margin-left: 20px;
+            padding: 5px;
+            display: flex;
+            justify-content: space-evenly;
+            
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+        .today,.daily1{
+            margin-left: 40px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .temp{
+            width: 170px;
+             margin-top: -20px;
+        }
+        .temp1{
+            font-size: 40px;
+            
+        }
+        .cli{
+            margin-top: -25px;
+            font-size: 20px;
+        }
+        .date1{
+            margin-top: -15px;
+        }
+       .details{
+            margin-left: -10px;
+        }
+        .tommorow h1,.dayafter h1{
+            font-size: 40px;
+        }
+        .daily{
+            display: flex;
+            justify-content: space-around;
+        }
+       .error{
+            text-align: center;
+            color: white;
+        }
+        .tommorow,.dayafter{
+           
+            height: 180px;
+            width: 150px;
+            padding-left: 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+            border-radius: 20px;
+        }
+        .tommorow .date,.dayafter .date{
+            margin-top: -15px;
+        }
+        .tommorow .weather,.dayafter .weather{
+            font-size: 20px;
+        }
+        .temp sup{
+            margin-left: -5px;
+            font-size: 20px;
+        }
+        .daily sup{
+            font-size: 20px;
+            margin-left: 5px;
+        }
+        .todaycli:hover{
+            background-color: #f2f2f2;
+        }
+        .tommorow:hover{
+            background-color: #f2f2f2;
+        }
+        .dayafter:hover{
+            background-color: #f2f2f2;
+        }
+        nav{
+            display: flex;
+            justify-content: flex-end;
+            color: black;
+            padding: 20px 20px;
+            
+        }
+        nav ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 30px;
+            font-size: 20px;
+            font-family: 'Assistant', sans-serif;
+            z-index: 10000;
+        }
+        nav ul li{
+            position: relative;
+            list-style:none;
+        }
+        nav ul li::after{
+            position: absolute;
+            content: '';
+            inset: 0;
+            height: 3px;
+            top: 100%;
+            transform: scale(0);
+            transition: transform 200ms ease;
+            background-color: wheat ;
+        }
+        nav ul li:hover::after{
+            cursor: pointer;
+            transform: scale(1);
+        }
+        nav ul li a{
+            color: inherit;
+            text-decoration: none;
+        }
+     </style>
+</head>
+<body>
+    
+    <div class="con">
+        <div class="con1">
+
+            <div class="loc">
+                <img width="24" height="24" class="loc1" src="https://img.icons8.com/ios-filled/50/place-marker--v1.png" alt="place-marker--v1"/>
+                <div class="locname">
+                    <p class="current">Current Location</p>
+                    <p class="locname2"> <%= location %></p>
+                </div>
+            </div>
+            <div class="bio">
+                    <h1>The Only Weather Forecast You Need</h1>
+            </div>
+            <div class="in">
+                <form action="/weather" method="post">
+                    <input type="text" name="city" class="city" id="city" placeholder="Enter location">
+                    <button><img width="26" height="26" src="https://img.icons8.com/ios-filled/50/000000/search--v1.png" alt="search"/></button>
+                </form>
+              
+            </div>
+          <h1 class="error"><%= error %></h1>
+        </div>
+        <div class="con2">
+            <h1 class="today">Today</h1>
+            <div class="todaycli">
+                <div class="temp">
+                    <h1 class="temp1"> <%= temp %> <sup>° </sup></h1>
+                    <p class="cli"> <%= climate %> <img src="<%= pic %>" height="24px" width="24px" alt="*"> </p>
+                    
+                </div>
+                
+                <div class="details">
+                    
+                    <p class="humidity">Humidity:<%=humidity %>%</p>
+                    <p class="wind">Wind Speed:<%= wind %> kmph</p>
+                    <p class="winddir">Wind Direction:<%= winddir %></p>
+                </div>
+            </div>
+            <h1 class="daily1">Daily</h1>
+            <div class="daily">
+
+                <div class="tommorow">
+                    
+                    <h1> <%=tommtemp %><sup>° </sup></h1>
+                    <p class="weather"> <%= dayaftercli %> <img src="<%= pic3 %>" height="24px" width="24px" alt="*"></p>
+                    <p class="date"> <%= date1 %></p>
+                </div>
+                <div class="dayafter">
+                    <h1> <%= dayaftertemp %><sup>° </sup></h1>
+                    <p class="weather"> <%= tommcli %> <img src="<%= pic3 %>" height="24px" width="24px" alt="*"> </p>
+                    <p class="date"><%= date2 %></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

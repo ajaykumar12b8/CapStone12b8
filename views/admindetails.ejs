@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    
+    <style>
+        body{
+            background-color: #999999;
+        }
+        .head{
+            text-align: center;
+        }
+        table{
+            text-align: center;
+            background-color: white;
+            
+        }
+        table td{
+            padding: 10px;
+        }
+        table th{
+            font-size: 20px;
+            padding: 10px;
+        }
+        .box{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="head"><h1>DASHBOARD</h1></div>
+    <div class="box">
+        <table border="1px" cellspacing="0px" cellpadding="10px" align="center" style="border-style:inset;" width="550px">
+            <tr>
+                <th>S NO</th>
+                <th>EMAIL</th>
+                <th>CITY</th>
+            </tr>
+            <% for(var i=0;i < userData.length;i++){ %>
+                <tr><td><%= i+1 %></td>
+                    <td><%= userData[i].email %></td>
+                    <td><%= userData[i].city %></td>
+                </tr>
+            <% } %>
+        </table>
+    </div>
+</body>
+</html>

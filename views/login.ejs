@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>LogIn</title>
+    <style>
+        body{
+            background-color: #8c8c8c;
+        }
+        .con{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin: 20px auto;
+        }
+        .container{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+            height: 450px;
+            width: 400px;
+            background-image: url('https://images.pexels.com/photos/2448749/pexels-photo-2448749.jpeg?auto=compress&cs=tinysrgb&w=400');
+            background-size: cover;
+
+        }
+        .page{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            width: 400px;
+            height: 450px;
+           background-color: white;
+            text-align: center;
+        }
+        .head{
+            margin-top: 50px;
+        }
+        input{
+            height: 30px;
+            width: 80%;
+        }
+        button{
+
+            height: 35px;
+            width:300px ;
+            border-radius: 5px;
+            background-color: #99ccff;
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+           
+        }
+        h1{
+            color:white ;
+        }
+        h1:hover{
+            transition: 1s;
+            color: #99003d;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"><h1 class="title">Weather App</h1></div>
+
+    <div class="con">
+        <div class="container">
+            
+        </div>
+        <div class="page">
+            <form action="/loginsubmit" method="post">
+                <h2 class="head">LogIn</h2><br><br>
+                <input type="email" name="email" id="" class="name" placeholder="Email or Phone" required><br><br>
+                <input type="password" name="password" id="" class="pass" placeholder="Password" required><br><br>
+                <a href="/adminlogin" class="admin">Admin LogIn</a><br><br>
+                <button type="submit" class="reg" >LogIn</button>
+                <p class="error"><%= error %></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>
